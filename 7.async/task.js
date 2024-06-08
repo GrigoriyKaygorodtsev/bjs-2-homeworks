@@ -1,3 +1,9 @@
+new Date().toLocaleTimeString("ru-Ru", {
+    hour: "2-digit",
+    minute: "2-digit",
+})
+
+
 class AlarmClock {
     constructor() {
 
@@ -42,7 +48,7 @@ class AlarmClock {
         let hours = now.getHours();
         let minutes = now.getMinutes();
 
-        return '${hours}:${minutes}';
+        return `${hours}:${minutes}`;
 
     }
 
@@ -57,7 +63,7 @@ class AlarmClock {
 
             this.alarmCollection.forEach(alarm => {
 
-                if (alarm.time === currentTime && alarm.canCall) {
+                if (alarm.time === correntTime && alarm.canCall) {
 
                     alarm.canCall = false;
 
